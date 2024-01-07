@@ -148,12 +148,21 @@ console.log("£££££££ BONJOUR et BIENVENU ££££££££");
 console.log("££££££££££££££££££££££££££££££££££££");
 console.log("");
 console.log("");
-setTimeout(function() {
+
     for (let i = 0; i < salleAttente.length; i++) {
 
+
         salleAttente[i].seDeplacer()
+
+
+
         if(salleAttente[i].lieu == "Cabinet du Docteur"){
-            docteur.diagnostiquer(salleAttente[i])
+            setTimeout(function() {
+                console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+                console.log("$$$$$$ Bienvenu chez Docteur $$$$$$$$");
+                docteur.diagnostiquer(salleAttente[i])
+
+            }, 2000);
             if(salleAttente[i].argent < traitementPrix(salleAttente[i].poche)){
                 salleAttente[i].lieu = "Cimetiere"
                 console.log("Miskine il a pas assez d'argent pour guerir et donc il meurt");
@@ -167,7 +176,7 @@ setTimeout(function() {
     }
 
     console.log("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!!...");
-}, 2000);
+
 
 
 
