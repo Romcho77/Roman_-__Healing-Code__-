@@ -11,7 +11,7 @@ class Patient {
     }
 
     seDeplacer(){
-
+        
         
         if(this.lieu == "salle d'attente"){
             console.log("Le patient il va dans le cabinet");
@@ -118,7 +118,12 @@ let docteur = {
 
 
 for (let i = 0; i < salleAttente.length; i++) {
-    
+
+    salleAttente[i].seDeplacer()
+    if(salleAttente[i].lieu == "Cabinet du Docteur"){
+        docteur.diagnostiquer(salleAttente[i])
+        if(salleAttente[i])
+    }
     
 }
 
