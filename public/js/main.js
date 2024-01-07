@@ -49,7 +49,7 @@ let docteur = {
     nom : "Docteur Mendeleev",
     cabinet : [chat],
     argent : 0,
-    diagnostiqueTab : ["",],
+    diagnostiqueTab : ["ctrl+maj+f","saveOnFocusChange","CheckLinkRelation", "Ventoline","f12+doc"],
     diagnostique(patient){
 
     },
