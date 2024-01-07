@@ -49,9 +49,34 @@ let docteur = {
     nom : "Docteur Mendeleev",
     cabinet : [chat],
     argent : 0,
-    diagnostiqueTab : ["ctrl+maj+f","saveOnFocusChange","CheckLinkRelation", "Ventoline","f12+doc"],
+    diagnostiqueTab : ["ctrl+maj+f","saveOnFocusChange",
+    "CheckLinkRelation", "Ventoline","f12+doc"],
     diagnostique(patient){
-
+        switch (patient.maladie) {
+            case "mal indente":
+                
+                break;
+        
+            case "unsave":
+                
+                break;
+        
+            case "404":
+                
+                break;
+        
+            case "azmatique":
+                
+                break;
+        
+            case "syntaxError":
+                
+                break;
+        
+            default:
+                console.log("Maladie non reconnu!!!");
+                break;
+        }
     },
     patientIn : [],
     patientOut : []
