@@ -14,7 +14,7 @@ class Patient {
         
         
         if(this.lieu == "salle d'attente"){
-            console.log("Le patient il va dans le cabinet");
+            console.log(this.nom, "il va dans le cabinet");
             this.lieu = "Cabinet du Docteur"
         }else if (this.lieu ==  "Cabinet du Docteur" ){
             console.log("Le patient il va dans la Pharmacie");
@@ -36,11 +36,11 @@ class Patient {
 
 }
 
-let Marcus = new Patient("Marcus","mal indente", 100,[],"malade")
-let Optimus = new Patient("Optimus","unsave", 200,[],"malade")
-let Sangoku = new Patient("Sangoku","404", 80,[],"malade")
-let DarthVader = new Patient("DarthVader","azmatique", 110,[],"malade")
-let Semicolon = new Patient("Semicolon","syntaxError", 60,[],"malade")
+let Marcus = new Patient("Marcus","mal indente", 100,"","malade")
+let Optimus = new Patient("Optimus","unsave", 200,"","malade")
+let Sangoku = new Patient("Sangoku","404", 80,"","malade")
+let DarthVader = new Patient("DarthVader","azmatique", 110,"","malade")
+let Semicolon = new Patient("Semicolon","syntaxError", 60,"","malade")
 
 
 let salleAttente = [Marcus,Optimus,Sangoku,DarthVader,Semicolon]
@@ -112,6 +112,35 @@ let docteur = {
     
 }
 
+function traitementPrix(traitement) {
+    switch (traitement) {
+        case  "ctrl+maj+f":
+            
+            return 60;
+    
+        case  "saveOnFocusChange":
+            
+            return 100;
+    
+        case  "CheckLinkRelation":
+            
+            return 35;
+    
+        case  "Ventoline":
+            
+            return 40;
+    
+        case  "f12+doc":
+            
+            return 20;
+    
+        default:
+            console.log("je sais pas combien il faut pour le traitement");
+            break;
+    }
+
+    
+}
 
 
 
@@ -122,7 +151,13 @@ for (let i = 0; i < salleAttente.length; i++) {
     salleAttente[i].seDeplacer()
     if(salleAttente[i].lieu == "Cabinet du Docteur"){
         docteur.diagnostiquer(salleAttente[i])
-        if(salleAttente[i])
+        if(salleAttente[i].argent < traitementPrix(salleAttente[i].poche)){
+            salleAttente[i].lieu = "Cimetiere"
+            console.log("Miskine il a pas assez d'argent pour guerir et donc il meurt");
+            console.log(salleAttente[i].nom, " est au Cimetiere mtn");
+        }else{
+            console.log(salleAttente[i].nom , " est gueris mtn");
+        }
     }
     
 }
