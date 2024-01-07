@@ -141,28 +141,22 @@ function traitementPrix(traitement) {
 
     
 }
+setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+    console.log("££££££££££££££££££££££££££££££££££££");
+    console.log("£££££££ BONJOUR et BIENVENU ££££££££");
+    console.log("££££££££££££££££££££££££££££££££££££");
+    console.log("");
+    console.log("");                  //  ..  setTimeout()
+  }, 3000)
 
 
-console.log("££££££££££££££££££££££££££££££££££££");
-console.log("£££££££ BONJOUR et BIENVENU ££££££££");
-console.log("££££££££££££££££££££££££££££££££££££");
-console.log("");
-console.log("");
-
-function timer(ms) { 
-    return new Promise(res => setTimeout(res, ms)); 
-}
 
 
-async function task(i) { // 3
-    await timer(1000);
-    console.log(`Task ${i} done!`);
-}
 
-
-async function main() {
 for (let i = 0; i < salleAttente.length; i++) {
-
+    setTimeout(function timer() {
+        
+    
     salleAttente[i].seDeplacer()
 
     if(salleAttente[i].lieu == "Cabinet du Docteur"){
@@ -181,14 +175,16 @@ for (let i = 0; i < salleAttente.length; i++) {
             console.log(salleAttente[i].nom , " est gueris mtn");
         }
     }
+
+
     console.log("");
     console.log("");
-}
+    console.warn("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!! ...");
+    console.log("");
+    console.log("");
 
-console.log("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!! ...");
-
+    }, i * 2000);
 }
-main()
 
 
     // for (let i = 0; i < salleAttente.length; i++) {
