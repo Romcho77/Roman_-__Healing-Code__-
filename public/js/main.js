@@ -6,16 +6,22 @@ class Patient {
         this.argent = argent
         this.poche = poche
         this.etat = etat
+        this.lieu = "salle d'attente"
 
     }
 
-    seDeplacer(lieu){
+    seDeplacer(){
 
         
-
-        // this.lieu = lieu.nom
-        lieu.personnes.push(this.nom)
-        console.log(this.nom + " va chez medecin à la " + personnage.lieu)
+        if(this.lieu == "salle d'attente"){
+            console.log("Le patient il va dans le cabinet");
+            this.lieu = "Cabinet du Docteur"
+        }else if (this.lieu ==  "Cabinet du Docteur" ){
+            console.log("Le patient il va dans la Pharmacie");
+            this.lieu = "Pharmacie"
+        }else {
+            console.log("JE SAIS PAS OU IL EST ????????");
+        }
 
         
     }
