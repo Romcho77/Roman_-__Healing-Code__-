@@ -149,33 +149,77 @@ console.log("£££££££££££££££££££££££££££££££££�
 console.log("");
 console.log("");
 
-    for (let i = 0; i < salleAttente.length; i++) {
+function timer(ms) { 
+    return new Promise(res => setTimeout(res, ms)); 
+}
 
 
-        salleAttente[i].seDeplacer()
+async function task(i) { // 3
+    await timer(1000);
+    console.log(`Task ${i} done!`);
+}
 
 
+async function main() {
+for (let i = 0; i < salleAttente.length; i++) {
 
-        if(salleAttente[i].lieu == "Cabinet du Docteur"){
-            setTimeout(function() {
-                console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-                console.log("$$$$$$ Bienvenu chez Docteur $$$$$$$$");
-                docteur.diagnostiquer(salleAttente[i])
+    salleAttente[i].seDeplacer()
 
-            }, 2000);
-            if(salleAttente[i].argent < traitementPrix(salleAttente[i].poche)){
-                salleAttente[i].lieu = "Cimetiere"
-                console.log("Miskine il a pas assez d'argent pour guerir et donc il meurt");
-                console.log(salleAttente[i].nom, " est au Cimetiere mtn");
-            }else{
-                console.log(salleAttente[i].nom , " est gueris mtn");
-            }
+    if(salleAttente[i].lieu == "Cabinet du Docteur"){
+
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        console.log("$$$$$$ Bienvenu chez Docteur $$$$$$$$");
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+        docteur.diagnostiquer(salleAttente[i])
+
+
+        if(salleAttente[i].argent < traitementPrix(salleAttente[i].poche)){
+            salleAttente[i].lieu = "Cimetiere"
+            console.log("Miskine il a pas assez d'argent pour guerir et donc il meurt");
+            console.log(salleAttente[i].nom, " est au Cimetiere mtn");
+        }else{
+            console.log(salleAttente[i].nom , " est gueris mtn");
         }
-        console.log("");
-        console.log("");
     }
+    console.log("");
+    console.log("");
+}
 
-    console.log("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!!...");
+console.log("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!! ...");
+
+}
+main()
+
+
+    // for (let i = 0; i < salleAttente.length; i++) {
+
+    //     salleAttente[i].seDeplacer()
+    
+    //     if(salleAttente[i].lieu == "Cabinet du Docteur"){
+    
+    //         console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+    //         console.log("$$$$$$ Bienvenu chez Docteur $$$$$$$$");
+    //         console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+    //         docteur.diagnostiquer(salleAttente[i])
+    
+    
+    //         if(salleAttente[i].argent < traitementPrix(salleAttente[i].poche)){
+    //             salleAttente[i].lieu = "Cimetiere"
+    //             console.log("Miskine il a pas assez d'argent pour guerir et donc il meurt");
+    //             console.log(salleAttente[i].nom, " est au Cimetiere mtn");
+    //         }else{
+    //             console.log(salleAttente[i].nom , " est gueris mtn");
+    //         }
+    //     }
+    //     console.log("");
+    //     console.log("");
+    // }
+    
+    // console.log("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!! ...");
+
+
+
+
 
 
 
