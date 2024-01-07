@@ -54,23 +54,28 @@ let docteur = {
     diagnostique(patient){
         switch (patient.maladie) {
             case "mal indente":
-                
+                console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[0] );
+                patient.poche = this.diagnostiqueTab[0]
                 break;
         
             case "unsave":
-                
+                console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[1] );
+                patient.poche = this.diagnostiqueTab[1]
                 break;
         
             case "404":
-                
+                console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[2] );
+                patient.poche = this.diagnostiqueTab[2]
                 break;
         
             case "azmatique":
-                
+                console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[3] );
+                patient.poche = this.diagnostiqueTab[3]
                 break;
         
             case "syntaxError":
-                
+                console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[4] );
+                patient.poche = this.diagnostiqueTab[4]
                 break;
         
             default:
@@ -82,6 +87,11 @@ let docteur = {
     patientOut : []
     
 }
+
+
+
+
+
 
 for (let i = 0; i < salleAttente.length; i++) {
     
