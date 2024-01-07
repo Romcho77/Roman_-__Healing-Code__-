@@ -143,22 +143,31 @@ function traitementPrix(traitement) {
 }
 
 
+console.log("££££££££££££££££££££££££££££££££££££");
+console.log("£££££££ BONJOUR et BIENVENU ££££££££");
+console.log("££££££££££££££££££££££££££££££££££££");
+console.log("");
+console.log("");
+setTimeout(function() {
+    for (let i = 0; i < salleAttente.length; i++) {
 
-
-
-for (let i = 0; i < salleAttente.length; i++) {
-
-    salleAttente[i].seDeplacer()
-    if(salleAttente[i].lieu == "Cabinet du Docteur"){
-        docteur.diagnostiquer(salleAttente[i])
-        if(salleAttente[i].argent < traitementPrix(salleAttente[i].poche)){
-            salleAttente[i].lieu = "Cimetiere"
-            console.log("Miskine il a pas assez d'argent pour guerir et donc il meurt");
-            console.log(salleAttente[i].nom, " est au Cimetiere mtn");
-        }else{
-            console.log(salleAttente[i].nom , " est gueris mtn");
+        salleAttente[i].seDeplacer()
+        if(salleAttente[i].lieu == "Cabinet du Docteur"){
+            docteur.diagnostiquer(salleAttente[i])
+            if(salleAttente[i].argent < traitementPrix(salleAttente[i].poche)){
+                salleAttente[i].lieu = "Cimetiere"
+                console.log("Miskine il a pas assez d'argent pour guerir et donc il meurt");
+                console.log(salleAttente[i].nom, " est au Cimetiere mtn");
+            }else{
+                console.log(salleAttente[i].nom , " est gueris mtn");
+            }
         }
+        console.log("");
+        console.log("");
     }
-    
-}
+
+    console.log("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!!...");
+}, 2000);
+
+
 
