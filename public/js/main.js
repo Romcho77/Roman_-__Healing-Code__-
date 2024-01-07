@@ -1,3 +1,4 @@
+//Patient Declaration
 class Patient {
     constructor(nom,maladie,argent,poche,etat){
         this.nom = nom
@@ -45,36 +46,53 @@ let chat = {
     }
 }
 
+//Doctor Declaration
 let docteur = {
     nom : "Docteur Mendeleev",
     cabinet : [chat],
     argent : 0,
     diagnostiqueTab : ["ctrl+maj+f","saveOnFocusChange",
     "CheckLinkRelation", "Ventoline","f12+doc"],
-    diagnostique(patient){
+
+    diagnostiquer(patient){
         switch (patient.maladie) {
             case "mal indente":
+                this.argent += 50
+                console.log("le patient ---> ", patient.nom, " paye de sa poche -->  50 euros");
+                patient.argent = patient.argent - 50
                 console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[0] );
                 patient.poche = this.diagnostiqueTab[0]
                 break;
         
             case "unsave":
+                this.argent += 50
+                console.log("le patient ---> ", patient.nom, " paye de sa poche -->  50 euros");
+                patient.argent = patient.argent - 50
                 console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[1] );
                 patient.poche = this.diagnostiqueTab[1]
                 break;
         
             case "404":
+                this.argent += 50
+                console.log("le patient ---> ", patient.nom, " paye de sa poche -->  50 euros");
+                patient.argent = patient.argent - 50
                 console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[2] );
                 patient.poche = this.diagnostiqueTab[2]
                 break;
         
             case "azmatique":
+                this.argent += 50
+                console.log("le patient ---> ", patient.nom, " paye de sa poche -->  50 euros");
+                patient.argent = patient.argent - 50
                 console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[3] );
                 patient.poche = this.diagnostiqueTab[3]
                 break;
         
             case "syntaxError":
-                console.log("Pour la maladie --> ", patient.maladie, " il recois ", this.diagnostiqueTab[4] );
+                this.argent += 50
+                console.log("le patient ---> ", patient.nom, " paye de sa poche -->  50 euros");
+                patient.argent = patient.argent - 50
+                console.log("Pour la maladie --> ", patient.maladie, " il recois ==>", this.diagnostiqueTab[4] );
                 patient.poche = this.diagnostiqueTab[4]
                 break;
         
