@@ -10,6 +10,7 @@ class Patient {
 
     }
 
+    //move method
     seDeplacer(){
         
         
@@ -32,6 +33,7 @@ class Patient {
 
 }
 
+// instances creation
 let Marcus = new Patient("Marcus","mal indente", 100,"","malade")
 let Optimus = new Patient("Optimus","unsave", 200,"","malade")
 let Sangoku = new Patient("Sangoku","404", 80,"","malade")
@@ -59,6 +61,7 @@ let docteur = {
     argent : 0,
     diagnostiqueTab : ["ctrl+maj+f","saveOnFocusChange",
     "CheckLinkRelation", "Ventoline","f12+doc"],
+
 
     diagnostiquer(patient){
         switch (patient.maladie) {
@@ -112,6 +115,7 @@ let docteur = {
     
 }
 
+//function to see the price of treatment
 function traitementPrix(traitement) {
     switch (traitement) {
         case  "ctrl+maj+f":
@@ -141,6 +145,9 @@ function traitementPrix(traitement) {
 
     
 }
+
+
+//trying the set timeout function
 setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     console.log("££££££££££££££££££££££££££££££££££££");
     console.log("£££££££ BONJOUR et BIENVENU ££££££££");
@@ -153,6 +160,8 @@ setTimeout(function() {   //  call a 3s setTimeout when the loop is called
 
 
 
+
+// loop for all patients to heal them
 for (let i = 0; i < salleAttente.length; i++) {
     setTimeout(function timer() {
         
