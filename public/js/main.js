@@ -147,7 +147,7 @@ setTimeout(function() {   //  call a 3s setTimeout when the loop is called
     console.log("££££££££££££££££££££££££££££££££££££");
     console.log("");
     console.log("");                  //  ..  setTimeout()
-  }, 3000)
+  }, 0)
 
 
 
@@ -204,6 +204,7 @@ for (let i = 0; i < salleAttente.length; i++) {
     //             console.log("Miskine il a pas assez d'argent pour guerir et donc il meurt");
     //             console.log(salleAttente[i].nom, " est au Cimetiere mtn");
     //         }else{
+
     //             console.log(salleAttente[i].nom , " est gueris mtn");
     //         }
     //     }
