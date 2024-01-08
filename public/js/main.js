@@ -29,13 +29,6 @@ class Patient {
         
     }
 
-    prendreMedicament(medicament){
-
-    }
-
-    payer(prix){
-
-    }
 
 }
 
