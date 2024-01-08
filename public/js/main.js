@@ -16,9 +16,12 @@ class Patient {
         if(this.lieu == "salle d'attente"){
             console.log(this.nom, "il va dans le cabinet");
             this.lieu = "Cabinet du Docteur"
+            docteur.patientIn.push(this.nom)
         }else if (this.lieu ==  "Cabinet du Docteur" ){
             console.log("Le patient il va dans la Pharmacie");
             this.lieu = "Pharmacie"
+            docteur.patientIn.pop(this.nom)
+            docteur.patientOut.push(this.nom)
         }else {
             console.log("JE SAIS PAS OU IL EST ????????");
         }
