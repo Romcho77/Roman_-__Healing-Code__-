@@ -48,7 +48,11 @@ let salleAttente = [Marcus,Optimus,Sangoku,DarthVader,Semicolon]
 let chat = {
     race : "Sphynx",
     miaule(){
-
+        console.log("");
+        console.log("");
+        console.warn("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!! ...");
+        console.log("");
+        console.log("");
     }
 }
 
@@ -177,11 +181,7 @@ for (let i = 0; i < salleAttente.length; i++) {
     }
 
 
-    console.log("");
-    console.log("");
-    console.warn("... MMMMIIIIIIIIIAAAAAAAAAAAWWWWWWWWWW !!!!!!!! ...");
-    console.log("");
-    console.log("");
+docteur.cabinet[0].miaule()
 
     }, i * 2000);
 }
